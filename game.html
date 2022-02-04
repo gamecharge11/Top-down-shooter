@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shooter</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      @font-face {
+        font-family: "font";
+        src: url(./font/font.ttf);
+      }
+
+      canvas {
+        background-color: black;
+      }
+
+      #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: "font";
+        font-size: 70px;
+        transition: 1.5s all ease-in-out;
+      }
+
+      #text {
+        color: rgba(255, 255, 255, 0);
+        transition: 1.5s all ease-in-out;
+      }
+
+      *::selection {
+        background-color: none;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+    <div id="overlay">
+      <h1 id="text"></h1>
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

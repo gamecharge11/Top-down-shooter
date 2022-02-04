@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shooter</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: white;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: url(./Assets/bg.png);
+        background-size: 100vw 100vh;
+      }
+
+      @font-face {
+        font-family: "font";
+        src: url(./font/font.ttf);
+      }
+      h1 {
+        font-family: "font";
+        font-size: 250px;
+      }
+
+      .btns {
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .btns button {
+        width: fit-content;
+        height: fit-content;
+        padding-left: 45px;
+        padding-right: 45px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: none;
+        cursor: pointer;
+        background-color: black;
+        font-size: 120%;
+        border-radius: 7px;
+        transition: 0.3s all ease-in-out;
+      }
+
+      .btns button:hover {
+        opacity: 0.7;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SHOOTER</h1>
+    <br /><br /><br /><br /><br />
+    <div class="btns">
+      <button id="play">Play</button>
+      <br /><br />
+      <button id="instructions">Instructions</button>
+    </div>
+    <script>
+      document.getElementById("play").onclick = () => {
+        location.href = "game.html";
+      };
+      document.getElementById("instructions").onclick = () => {
+        location.href = "instructions.html";
+      };
+    </script>
+  </body>
+</html>
